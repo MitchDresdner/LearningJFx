@@ -1,4 +1,4 @@
-package sample.sample.tableview;
+package sample.tableview;
 
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -10,6 +10,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -76,6 +77,11 @@ public class Main extends Application {
         vBox.getChildren().addAll(table, hBox);
 
         Scene scene = new Scene(vBox);
+
+        // Good: window.getIcons().add(new Image("http://goo.gl/kYEQl"));
+        //window.getIcons().add(new Image("resources/css/Dominion-Logo_64.ico"));
+        window.getIcons().add(new Image("resources/images/Logo400.png"));
+        // Bad: no likey .ico: window.getIcons().add(new Image("resources/images/Dominion-Logo_64.ico"));
         window.setScene(scene);
         window.show();
     }

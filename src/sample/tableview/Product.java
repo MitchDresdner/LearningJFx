@@ -1,4 +1,4 @@
-package sample.sample.tableview;
+package sample.tableview;
 
 public class Product {
 
